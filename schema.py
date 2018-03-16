@@ -107,7 +107,6 @@ class CreateQuestion(Mutation):
         tmp = Que()
         tmp = obj_copy(question_input, tmp)
         tmp.save()
-        print(tmp.to_json())
         tmp.oid = tmp.auto_id_0
         return CreateQuestion(question=tmp)
 
@@ -143,7 +142,6 @@ class CreateSurvey(Mutation):
         tmp = Sur()
         tmp = obj_copy(survey_input, tmp)
         tmp.save()
-        print(tmp.to_json())
         tmp.oid = tmp.auto_id_0
         return CreateSurvey(survey=tmp)
 
@@ -177,7 +175,6 @@ class CreateAnswer(Mutation):
         tmp = Ans()
         tmp = obj_copy(answer_input, tmp)
         tmp.save()
-        print(tmp.to_json())
         tmp.oid = tmp.auto_id_0
         return CreateAnswer(answer=tmp)
 

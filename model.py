@@ -38,3 +38,9 @@ class Answer(Document):
     user_id = StringField(required=True)
     question_oid = StringField(required=True)
     content = StringField(required=True)  # 多项选择题以`|`分割即可
+
+
+class Dict(Document):
+    word = StringField(required=True)
+    SHIFT_TYPE = ['neg', 'pos', 'stop']
+    type = StringField(required=True, choices=SHIFT_TYPE)

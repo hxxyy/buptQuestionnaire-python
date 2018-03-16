@@ -16,13 +16,13 @@ CORS(app)
 
 @app.route('/')
 def index():
-    return app.send_static_file('index.html')
+    return app.send_static_file("index.html")
 
 
 if __name__ == '__main__':
-    host = socket.gethostbyname(socket.gethostname()) + ':8081'
-    img = qrcode.make(host)
-    img.save('host.png')
-    os.system('open %s' % os.path.join(os.path.dirname(__file__), 'host.png'))
-    print('Your app is running on [%s]' % host)
+    # host = socket.gethostbyname(socket.gethostname()) + ':8081'
+    # img = qrcode.make(host)
+    # img.save('host.png')
+    # os.system('open %s' % os.path.join(os.path.dirname(__file__), 'host.png'))
+    # print('Your app is running on [%s]' % host)
     app.run(host='0.0.0.0', port=8081)
